@@ -2,13 +2,13 @@ import {React,useContext} from 'react'
 import { Bar, Pie } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
-export default function PieChartFrontEnd({state_back_end}) {
+export default function BarChartFrontEnd({state_back_end}) {
 
     const {state } = state_back_end;
     let {unlikelyRate,
-    veryLikelyRate, neutralRate, bar,showLabel
+    veryLikelyRate, neutralRate, showLabel
     }=state;
-  {console.log("state for backend",state)}
+
   const data = {
     labels: ["unLikely", "likely", "very likely"],
     datasets: [
@@ -31,7 +31,7 @@ export default function PieChartFrontEnd({state_back_end}) {
   };
   return (
     <div style={{ width: 450, textAlign: "center" }}>    
-    {bar ? <Pie data={data} width={30} height={30} /> : <Bar data={data} width={30} height={30} /> }  
+      <Bar data={data} width={30} height={30} />
     </div>
   );
 }

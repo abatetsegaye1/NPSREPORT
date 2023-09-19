@@ -33,8 +33,12 @@ function PieChartFrontEnd(_ref) {
     unlikelyRate,
     veryLikelyRate,
     neutralRate,
+    bar,
     showLabel
   } = state;
+  {
+    console.log("state for backend", state);
+  }
   const data = {
     labels: ["unLikely", "likely", "very likely"],
     datasets: [{
@@ -50,7 +54,11 @@ function PieChartFrontEnd(_ref) {
       width: 450,
       textAlign: "center"
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Pie, {
+  }, bar ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Pie, {
+    data: data,
+    width: 30,
+    height: 30
+  }) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Bar, {
     data: data,
     width: 30,
     height: 30
@@ -79,9 +87,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // Initial state for the counter
 const initialState = {
-  unlikelyRate: '',
-  veryLikelyRate: '',
-  neutralRate: '',
+  unlikelyRate: '#FF0000',
+  veryLikelyRate: '#00FF00',
+  neutralRate: '#0000FF',
   showLabel: true
 };
 
@@ -110,6 +118,7 @@ const reducer = (state, action) => {
       };
     default:
       return {
+        ...state,
         ...action.payload
       };
   }
@@ -15569,11 +15578,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const divsToUpdate = document.querySelectorAll(".boilerplate-update-me");
 divsToUpdate.forEach(div => {
   const data = JSON.parse(div.querySelector("pre").innerText);
-  console.log(data);
+  console.log("data from pre class div", data);
   react_dom__WEBPACK_IMPORTED_MODULE_4___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_ScaleContext__WEBPACK_IMPORTED_MODULE_5__.ScaleProvider, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(OurComponent, data)), div);
   div.classList.remove("boilerplate-update-me");
   div.classList.add("boilerplate-update-front");
@@ -15582,6 +15590,7 @@ function OurComponent(_ref) {
   let {
     state
   } = _ref;
+  console.log("state from front end", state);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_PieChartFrontEnd__WEBPACK_IMPORTED_MODULE_6__["default"], {
     state_back_end: {
       state: state

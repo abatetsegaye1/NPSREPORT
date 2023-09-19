@@ -1,8 +1,8 @@
 import React, { createContext, useReducer } from 'react';
 
 // Initial state for the counter
-const initialState = { unlikelyRate: '', 
-veryLikelyRate:'', neutralRate:'', showLabel:true
+const initialState = { unlikelyRate: '#FF0000', 
+veryLikelyRate:'#00FF00', neutralRate:'#0000FF', showLabel:true
 };
 
 // Reducer function
@@ -35,7 +35,9 @@ const reducer = (state, action) => {
       };  
    
     default:
-      return {...action.payload};
+      return {
+        ...state,
+        ...action.payload};
   }
 };
 

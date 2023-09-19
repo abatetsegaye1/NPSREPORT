@@ -14,14 +14,14 @@ const App = ({setAttributes}) => {
              
             {!isCustomize && (
             <>
-            {setting.numberScale &&   <NumberScale row={true} emoji={false} btnbg={'yellow'} btncolr={'red'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} key={1}/> }
+            {setting.numberScale &&  <NumberScale row={true} bar={false} btnbg={'yellow'} btncolr={'red'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} key={1}/> }
              {console.log(setting.numberScale )}
             {/* <NumberScale row={true} btnbg={'orange'} btncolr={'white'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={2}/> */}
             {/* <NumberScale row={false} btnbg={'green'} btncolr={'white'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={3}/>   */}
             
              {/* <NumberScale row={false} btnbg={'blue'} btncolr={'white'}  customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={4}/> */}
         
-            {setting.emojiScale && <NumberScale  row={true} emoji={true} btnbg={'#42DCC9'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} key={5}/>}
+            {setting.emojiScale && <NumberScale  row={true} bar={true} btnbg={'#42DCC9'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} key={5}/>}
             {/* <NumberScale emoji={true}  customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={6}/>  */}
          </>
          )}

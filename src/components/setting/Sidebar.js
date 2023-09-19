@@ -7,23 +7,19 @@ import Configuration from './Configuration';
 import { DragSwitch } from 'react-dragswitch'
 import PieChart from '../PieChart';
 import 'react-dragswitch/dist/index.css'
-export default function Sidebar({row,emoji,btnbg,btncolr, setAttributes}) {
+import BarChart from '../BarChart';
+export default function Sidebar({row,bar, unlikely,likely,veryLikely, setAttributes}) {
   //console.log(scaleContent);
   const [setting,setSetting] = useState(true);
   const { state, dispatch } = useContext(ScaleContext);
   const [sideBar,setSideBar]=useState(true);
 
-  useEffect(() => {
-    dispatch({
-      type: 'DEFAULT',
-      payload:{ ...state,
-        unlikelyRate: '',
-        veryLikelyRate: '',
-        neutralRate: '',
-        showLabel: true
-      }
-    });
-  }, []);
+   useEffect(()=>{
+
+    setAttributes({state:{...state,
+      bar: bar,
+    }});
+   },[])
  
 
   const handleUnLikelyRate = (e) => {
@@ -33,6 +29,7 @@ export default function Sidebar({row,emoji,btnbg,btncolr, setAttributes}) {
       payload: newColor,
     });
     setAttributes({state:{...state,
+      bar: bar,
       unlikelyRate: newColor,
     }});
   };
@@ -44,6 +41,7 @@ export default function Sidebar({row,emoji,btnbg,btncolr, setAttributes}) {
       payload: newColor,
     });
     setAttributes({state:{...state,
+      bar: bar,
       neutralRate: newColor,
     }});
   };
@@ -56,6 +54,7 @@ export default function Sidebar({row,emoji,btnbg,btncolr, setAttributes}) {
       payload: newColor,
     });
     setAttributes({state:{...state,
+      bar: bar,
       veryLikelyRate: newColor,
     }});
   };
@@ -70,6 +69,7 @@ export default function Sidebar({row,emoji,btnbg,btncolr, setAttributes}) {
       payload: newColor,
     });
     setAttributes({state:{...state,
+      bar: bar,
       showLabel: newColor,
     }});
   };
@@ -132,7 +132,7 @@ export default function Sidebar({row,emoji,btnbg,btncolr, setAttributes}) {
         
      </div>}
      {/* <Scale row={row} emoji={emoji} btnbg={btnbg} btncolr={btncolr} /> */}
-     <PieChart/>
+     {bar ? <PieChart/> : <BarChart/>} 
      </>
     // </div>
   )

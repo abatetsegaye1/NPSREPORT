@@ -1,7 +1,9 @@
 import {useState,React} from 'react'
+import PieChart from './PieChart';
+import BarChart from './BarChart';
 
 
-export default function NumberScale({row,emoji,btnbg,btncolr, customize,setCustomize,setScale, setting,setSetting}) {
+export default function NumberScale({row,bar,btnbg,btncolr, customize,setCustomize,setScale, setting,setSetting}) {
  
 
   const [isHovered, setIsHovered] = useState(false);
@@ -16,26 +18,27 @@ export default function NumberScale({row,emoji,btnbg,btncolr, customize,setCusto
   };
   const handleCustomize = () => {
      !customize && setCustomize(true);
-     setScale({row,emoji,btnbg,btncolr});
+     setScale({row,bar,btnbg,btncolr});
   };
 
 
 
-  const buttonStyle = {
-    background: btnbg ? btnbg :  'rgb(142, 216, 142)',
-    color:btncolr ?btncolr: 'white',
-    transform:row ? '' : `rotate(270deg)`
+  // const buttonStyle = {
+  //   background: btnbg ? btnbg :  'rgb(142, 216, 142)',
+  //   color:btncolr ?btncolr: 'white',
+  //   transform:row ? '' : `rotate(270deg)`
     
-    // Add other styles here as needed
-  };
-  const buttonStylecond=!emoji?buttonStyle:{transform:row ? '' : `rotate(270deg)`};
+  //   // Add other styles here as needed
+  // };
+  // const buttonStylecond=!emoji?buttonStyle:{transform:row ? '' : `rotate(270deg)`};
   return (
     <div  className={`frame `}
     style={{background:`${row ? '#E8D6F1':'#F2D5DD'}` }}>
         <div className={`frame__scale ${isHovered ? 'hovered' : ''}`}  onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}  style={{transform:`${row ? '':'rotate(90deg)'}`}}>
-          <label className='scale_typo'>How would you rate it?</label>
-          <div className='scale__buttons'>
+          {/* <label className='scale_typo'>How would you rate it?</label> */}
+          <div className='scale__buttons' style={{paddingLeft: bar?'130px':''}}>
+            {/*
             <button className={`${emoji ? 'emoji':'btn'}`} style={buttonStylecond}>{emoji ? <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 22 22" fill="none">
   <g clip-path="url(#clip0_386_596)">
     <path d="M10.966 21.932C17.0224 21.932 21.932 17.0224 21.932 10.966C21.932 4.90966 17.0224 0 10.966 0C4.90966 0 0 4.90966 0 10.966C0 17.0224 4.90966 21.932 10.966 21.932Z" fill="#42DCC9"/>
@@ -202,7 +205,8 @@ export default function NumberScale({row,emoji,btnbg,btncolr, customize,setCusto
     </clipPath>
   </defs>
 </svg>:10}</button> 
-
+  */}
+ {bar ? <PieChart />:<BarChart />} 
 {/* {!emoji && <button className='btn' style={buttonStylecond}>9</button> } */}
 {/* {!emoji && <button className='btn' style={buttonStylecond}>10</button> } */}
           {/* {!emoji && <button className='btn' style={buttonStylecond}>5</button> }  
@@ -213,12 +217,7 @@ export default function NumberScale({row,emoji,btnbg,btncolr, customize,setCusto
           {!emoji && <button className='btn' style={buttonStylecond}>10</button> } */}
 
           </div>
-          <div className='scale_rate'>
-            <label className='rate__typo'>unlikely</label>
-            <label className='rate__typo'>likely</label>
-            <label className='rate__typo'>most likely</label>
-          </div>
-         
+      
         
         {!customize && setting.useScale && isHovered && <div className="diplay_hover" style={{transform:row ? '' : `rotate(270deg)`}}>
             <button onClick={handleCustomize}>Customize</button>         
