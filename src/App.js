@@ -7,21 +7,21 @@ import './components/templatestyle.scss'
 const App = ({setAttributes}) => {
     const [isCustomize, setIsCustomized] = useState(false);
     const [scaleContent, setScaleContent] = useState(null);
-    const [setting,setSetting]=useState({useScale:true,emojiScale:true, numberScale:true});
+    const [setting,setSetting]=useState({useScale:true,bar:true,pie:true});
     return (
         <ScaleProvider>
-        <div className='scale_container'>
+        <div className='scalereport_container'>
              
             {!isCustomize && (
             <>
-            {setting.numberScale &&  <NumberScale row={true} bar={false} btnbg={'yellow'} btncolr={'red'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} key={1}/> }
-             {console.log(setting.numberScale )}
+            {setting.bar &&  <NumberScale bar={true} pie={false} btnbg={'yellow'} btncolr={'red'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} setAttributes={setAttributes} key={1}/> }
+             {/* {console.log(setting.numberScale )} */}
             {/* <NumberScale row={true} btnbg={'orange'} btncolr={'white'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={2}/> */}
             {/* <NumberScale row={false} btnbg={'green'} btncolr={'white'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={3}/>   */}
             
              {/* <NumberScale row={false} btnbg={'blue'} btncolr={'white'}  customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={4}/> */}
         
-            {setting.emojiScale && <NumberScale  row={true} bar={true} btnbg={'#42DCC9'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} key={5}/>}
+            {setting.pie && <NumberScale  pie={true} bar={false} btnbg={'#42DCC9'} customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} setting={setting} setSetting={setSetting} setAttributes={setAttributes} key={5}/>}
             {/* <NumberScale emoji={true}  customize={isCustomize} setCustomize={setIsCustomized} setScale={setScaleContent} key={6}/>  */}
          </>
          )}

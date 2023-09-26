@@ -33,14 +33,14 @@ const App = _ref => {
   const [scaleContent, setScaleContent] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(null);
   const [setting, setSetting] = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)({
     useScale: true,
-    emojiScale: true,
-    numberScale: true
+    bar: true,
+    pie: true
   });
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_ScaleContext__WEBPACK_IMPORTED_MODULE_4__.ScaleProvider, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", {
-    className: "scale_container"
-  }, !isCustomize && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, setting.numberScale && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_NumberScale__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    row: true,
-    bar: false,
+    className: "scalereport_container"
+  }, !isCustomize && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, setting.bar && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_NumberScale__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    bar: true,
+    pie: false,
     btnbg: 'yellow',
     btncolr: 'red',
     customize: isCustomize,
@@ -48,16 +48,18 @@ const App = _ref => {
     setScale: setScaleContent,
     setting: setting,
     setSetting: setSetting,
+    setAttributes: setAttributes,
     key: 1
-  }), console.log(setting.numberScale), setting.emojiScale && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_NumberScale__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    row: true,
-    bar: true,
+  }), setting.pie && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_NumberScale__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    pie: true,
+    bar: false,
     btnbg: '#42DCC9',
     customize: isCustomize,
     setCustomize: setIsCustomized,
     setScale: setScaleContent,
     setting: setting,
     setSetting: setSetting,
+    setAttributes: setAttributes,
     key: 5
   })), isCustomize && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_components_setting_Sidebar__WEBPACK_IMPORTED_MODULE_5__["default"], (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
     setAttributes: setAttributes
@@ -134,24 +136,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _PieChart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PieChart */ "./src/components/PieChart.js");
 /* harmony import */ var _BarChart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./BarChart */ "./src/components/BarChart.js");
+/* harmony import */ var _ScaleContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ScaleContext */ "./src/components/ScaleContext.js");
+
 
 
 
 
 function NumberScale(_ref) {
   let {
-    row,
     bar,
-    btnbg,
-    btncolr,
+    pie,
     customize,
     setCustomize,
     setScale,
     setting,
+    setAttributes,
     setSetting
   } = _ref;
   const [isHovered, setIsHovered] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
-
+  const {
+    state,
+    dispatch
+  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(_ScaleContext__WEBPACK_IMPORTED_MODULE_4__.ScaleContext);
   // Event handlers for hover
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -162,10 +168,7 @@ function NumberScale(_ref) {
   const handleCustomize = () => {
     !customize && setCustomize(true);
     setScale({
-      row,
-      bar,
-      btnbg,
-      btncolr
+      bar
     });
   };
 
@@ -178,39 +181,41 @@ function NumberScale(_ref) {
   // };
   // const buttonStylecond=!emoji?buttonStyle:{transform:row ? '' : `rotate(270deg)`};
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `frame `,
+    className: `framereport `,
     style: {
-      background: `${row ? '#E8D6F1' : '#F2D5DD'}`
+      background: `${'#F2D5DD'}`
     }
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: `frame__scale ${isHovered ? 'hovered' : ''}`,
+    className: `framereport__scale ${isHovered ? 'hovered' : ''}`,
     onMouseEnter: handleMouseEnter,
-    onMouseLeave: handleMouseLeave,
-    style: {
-      transform: `${row ? '' : 'rotate(90deg)'}`
-    }
+    onMouseLeave: handleMouseLeave
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "scale__buttons",
     style: {
       paddingLeft: bar ? '130px' : ''
     }
-  }, bar ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_PieChart__WEBPACK_IMPORTED_MODULE_2__["default"], null) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BarChart__WEBPACK_IMPORTED_MODULE_3__["default"], null)), !customize && setting.useScale && isHovered && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "diplay_hover",
-    style: {
-      transform: row ? '' : `rotate(270deg)`
-    }
+  }, bar && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BarChart__WEBPACK_IMPORTED_MODULE_3__["default"], null), pie && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_PieChart__WEBPACK_IMPORTED_MODULE_2__["default"], null)), !customize && setting.useScale && isHovered && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "diplay_hover"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     onClick: handleCustomize
   }, "Customize"))), !customize && setting.useScale && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "scale_use",
     onMouseEnter: handleMouseLeave
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", null, "Scale Template"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
-    onClick: () => setSetting(setting => ({
-      ...setting,
-      emojiScale: emoji,
-      numberScale: !emoji,
-      useScale: false
-    }))
+    onClick: () => {
+      setSetting(setting => ({
+        ...setting,
+        bar: bar,
+        pie: !bar,
+        useScale: false
+      }));
+      setAttributes({
+        state: {
+          ...state,
+          bar: bar
+        }
+      });
+    }
   }, "use"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "20",
@@ -533,11 +538,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function Sidebar(_ref) {
   let {
-    row,
     bar,
-    unlikely,
-    likely,
-    veryLikely,
     setAttributes
   } = _ref;
   //console.log(scaleContent);
@@ -615,7 +616,7 @@ function Sidebar(_ref) {
     setSideBar(false);
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, sideBar && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "sidebar"
+    className: "sidebarreport"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "setting_configure"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
@@ -673,7 +674,7 @@ function Sidebar(_ref) {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     onClick: hideSetting,
     className: "use_scale"
-  }, "Use Reports"))), bar ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_PieChart__WEBPACK_IMPORTED_MODULE_6__["default"], null) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BarChart__WEBPACK_IMPORTED_MODULE_8__["default"], null))
+  }, "Use Reports"))), bar ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_BarChart__WEBPACK_IMPORTED_MODULE_8__["default"], null) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_PieChart__WEBPACK_IMPORTED_MODULE_6__["default"], null))
   // </div>
   ;
 }
@@ -16409,8 +16410,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-wp.blocks.registerBlockType("makeupnamespace/make-up-block-name", {
-  title: "Brads Boilerplate Block",
+wp.blocks.registerBlockType("makeupnamespace/scale-report", {
+  title: "Boilerplatescalereport Block",
   icon: "welcome-learn-more",
   category: "common",
   attributes: {

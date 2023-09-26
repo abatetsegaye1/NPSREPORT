@@ -8,7 +8,7 @@ import { DragSwitch } from 'react-dragswitch'
 import PieChart from '../PieChart';
 import 'react-dragswitch/dist/index.css'
 import BarChart from '../BarChart';
-export default function Sidebar({row,bar, unlikely,likely,veryLikely, setAttributes}) {
+export default function Sidebar({bar, setAttributes}) {
   //console.log(scaleContent);
   const [setting,setSetting] = useState(true);
   const { state, dispatch } = useContext(ScaleContext);
@@ -80,7 +80,7 @@ export default function Sidebar({row,bar, unlikely,likely,veryLikely, setAttribu
 
   return (
     <>
-    {sideBar && <div className='sidebar'>
+    {sideBar && <div className='sidebarreport'>
     <div className='setting_configure'>
     <button className='setting_button' onClick={()=>setSetting(true)} style={{borderBottom: `${setting ? '3px solid #6E62E5':''}`}}>Setting</button>
     <button className='configure_button' onClick={()=>setSetting(false)} style={{borderBottom: `${!setting ? '3px solid #6E62E5':''}`}}>Configurations</button>
@@ -132,7 +132,7 @@ export default function Sidebar({row,bar, unlikely,likely,veryLikely, setAttribu
         
      </div>}
      {/* <Scale row={row} emoji={emoji} btnbg={btnbg} btncolr={btncolr} /> */}
-     {bar ? <PieChart/> : <BarChart/>} 
+     {bar ?  <BarChart/>:<PieChart/>} 
      </>
     // </div>
   )

@@ -1,7 +1,7 @@
 /*!************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/setting/sidebar.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************/
-.sidebar {
+.sidebarreport {
   width: 412px;
   height: 800px;
   padding: 5px;
@@ -13,12 +13,12 @@
   background: #F9F9F4;
   box-shadow: 0px 1.974609375px 3.94921875px 0px rgba(0, 0, 0, 0.05);
 }
-.sidebar .setting_configure {
+.sidebarreport .setting_configure {
   width: 80%;
   display: flex;
   justify-content: space-between;
 }
-.sidebar .setting_configure .setting_button {
+.sidebarreport .setting_configure .setting_button {
   width: auto;
   border: none;
   color: #2E3134;
@@ -31,7 +31,7 @@
   background: inherit;
   cursor: pointer;
 }
-.sidebar .setting_configure .configure_button {
+.sidebarreport .setting_configure .configure_button {
   width: auto;
   border: none;
   color: #2E3134;
@@ -44,7 +44,7 @@
   background: inherit;
   cursor: pointer;
 }
-.sidebar .sidebar_setting {
+.sidebarreport .sidebar_setting {
   width: 389px;
   height: 1219px;
   display: flex;
@@ -54,7 +54,7 @@
   border-radius: 12px;
   background: #FFF;
 }
-.sidebar .sidebar_setting .sidebar_element--one {
+.sidebarreport .sidebar_setting .sidebar_element--one {
   width: 80%;
   height: auto;
   display: flex;
@@ -63,7 +63,7 @@
   margin-bottom: 20px;
   margin-top: 7px;
 }
-.sidebar .sidebar_setting .sidebar_element--one .orient_label {
+.sidebarreport .sidebar_setting .sidebar_element--one .orient_label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -73,14 +73,14 @@
   letter-spacing: 0.421px;
   margin-bottom: 4px;
 }
-.sidebar .sidebar_setting .sidebar_element--one .orient_select {
+.sidebarreport .sidebar_setting .sidebar_element--one .orient_select {
   width: 100%;
   height: 26px;
   flex-shrink: 0;
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_two {
+.sidebarreport .sidebar_setting .sidebar_element_two {
   width: 80%;
   height: auto;
   display: flex;
@@ -88,11 +88,11 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.sidebar .sidebar_setting .sidebar_element_two .scale_color {
+.sidebarreport .sidebar_setting .sidebar_element_two .scale_color {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_two .scale_color label {
+.sidebarreport .sidebar_setting .sidebar_element_two .scale_color label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -101,7 +101,7 @@
   line-height: normal;
   letter-spacing: 0.421px;
 }
-.sidebar .sidebar_setting .sidebar_element_two .scale_color input {
+.sidebarreport .sidebar_setting .sidebar_element_two .scale_color input {
   width: 100px;
   height: 21.802px;
   flex-shrink: 0;
@@ -109,11 +109,11 @@
   background: #EBEBEB;
   margin-top: 8px;
 }
-.sidebar .sidebar_setting .sidebar_element_two .button_color {
+.sidebarreport .sidebar_setting .sidebar_element_two .button_color {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_two .button_color label {
+.sidebarreport .sidebar_setting .sidebar_element_two .button_color label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -122,7 +122,7 @@
   line-height: normal;
   letter-spacing: 0.421px;
 }
-.sidebar .sidebar_setting .sidebar_element_two .button_color input {
+.sidebarreport .sidebar_setting .sidebar_element_two .button_color input {
   margin-top: 10px;
   width: 140px;
   height: 21.802px;
@@ -131,18 +131,18 @@
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_three {
+.sidebarreport .sidebar_setting .sidebar_element_three {
   width: 80%;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.sidebar .sidebar_setting .sidebar_element_three .font_color {
+.sidebarreport .sidebar_setting .sidebar_element_three .font_color {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_three .font_color label {
+.sidebarreport .sidebar_setting .sidebar_element_three .font_color label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -151,7 +151,7 @@
   line-height: normal;
   letter-spacing: 0.421px;
 }
-.sidebar .sidebar_setting .sidebar_element_three .font_color input {
+.sidebarreport .sidebar_setting .sidebar_element_three .font_color input {
   width: 100px;
   height: 21.802px;
   flex-shrink: 0;
@@ -159,11 +159,11 @@
   background: #EBEBEB;
   margin-top: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_three .font_style {
+.sidebarreport .sidebar_setting .sidebar_element_three .font_style {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_three .font_style label {
+.sidebarreport .sidebar_setting .sidebar_element_three .font_style label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -172,7 +172,7 @@
   line-height: normal;
   letter-spacing: 0.421px;
 }
-.sidebar .sidebar_setting .sidebar_element_three .font_style select {
+.sidebarreport .sidebar_setting .sidebar_element_three .font_style select {
   width: 150px;
   height: 21.802px;
   flex-shrink: 0;
@@ -180,12 +180,12 @@
   background: #EBEBEB;
   margin-top: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_four {
+.sidebarreport .sidebar_setting .sidebar_element_four {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_four label {
+.sidebarreport .sidebar_setting .sidebar_element_four label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -195,21 +195,21 @@
   letter-spacing: 0.421px;
   margin-bottom: 12px;
 }
-.sidebar .sidebar_setting .sidebar_element_four .Scale_format {
+.sidebarreport .sidebar_setting .sidebar_element_four .Scale_format {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-.sidebar .sidebar_setting .sidebar_element_four .Scale_format div {
+.sidebarreport .sidebar_setting .sidebar_element_four .Scale_format div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   margin-right: 65px;
 }
-.sidebar .sidebar_setting .sidebar_element_five {
+.sidebarreport .sidebar_setting .sidebar_element_five {
   width: 80%;
   height: auto;
   display: flex;
@@ -218,11 +218,11 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.sidebar .sidebar_setting .sidebar_element_five .scale_width {
+.sidebarreport .sidebar_setting .sidebar_element_five .scale_width {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_five .scale_width label {
+.sidebarreport .sidebar_setting .sidebar_element_five .scale_width label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -231,7 +231,7 @@
   line-height: normal;
   letter-spacing: 0.421px;
 }
-.sidebar .sidebar_setting .sidebar_element_five .scale_width input {
+.sidebarreport .sidebar_setting .sidebar_element_five .scale_width input {
   width: 100px;
   height: 21.802px;
   flex-shrink: 0;
@@ -239,11 +239,11 @@
   background: #EBEBEB;
   margin-top: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_five .scale_height {
+.sidebarreport .sidebar_setting .sidebar_element_five .scale_height {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_five .scale_height label {
+.sidebarreport .sidebar_setting .sidebar_element_five .scale_height label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -252,7 +252,7 @@
   line-height: normal;
   letter-spacing: 0.421px;
 }
-.sidebar .sidebar_setting .sidebar_element_five .scale_height input {
+.sidebarreport .sidebar_setting .sidebar_element_five .scale_height input {
   width: 150px;
   height: 16.802px;
   flex-shrink: 0;
@@ -260,7 +260,7 @@
   background: #EBEBEB;
   margin-top: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_six {
+.sidebarreport .sidebar_setting .sidebar_element_six {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -268,7 +268,7 @@
   padding-top: 15px;
   margin-top: 15px;
 }
-.sidebar .sidebar_setting .sidebar_element_six label {
+.sidebarreport .sidebar_setting .sidebar_element_six label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -278,7 +278,7 @@
   letter-spacing: 0.421px;
   margin-bottom: 15px;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position {
   margin-bottom: 10px;
   width: 100%;
   height: auto;
@@ -286,11 +286,11 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position .scale_label--left {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position .scale_label--left {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position .scale_label--left label {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position .scale_label--left label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -300,18 +300,18 @@
   letter-spacing: 0.421px;
   margin-bottom: 5px;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position .scale_label--left input {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position .scale_label--left input {
   width: 100px;
   height: 21.802px;
   flex-shrink: 0;
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position .scale_label--center {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position .scale_label--center {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position .scale_label--center label {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position .scale_label--center label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -321,21 +321,21 @@
   letter-spacing: 0.421px;
   margin-bottom: 5px;
 }
-.sidebar .sidebar_setting .sidebar_element_six .label_position .scale_label--center input {
+.sidebarreport .sidebar_setting .sidebar_element_six .label_position .scale_label--center input {
   width: 150px;
   height: 16.802px;
   flex-shrink: 0;
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_six .scale_label--right {
+.sidebarreport .sidebar_setting .sidebar_element_six .scale_label--right {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_six .scale_label--right label {
+.sidebarreport .sidebar_setting .sidebar_element_six .scale_label--right label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -345,14 +345,14 @@
   letter-spacing: 0.421px;
   margin-bottom: 5px;
 }
-.sidebar .sidebar_setting .sidebar_element_six .scale_label--right input {
+.sidebarreport .sidebar_setting .sidebar_element_six .scale_label--right input {
   width: 100%;
   height: 16.802px;
   flex-shrink: 0;
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_seven {
+.sidebarreport .sidebar_setting .sidebar_element_seven {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -361,7 +361,7 @@
   border-top: 2px solid #D4D4D4;
   padding-top: 15px;
 }
-.sidebar .sidebar_setting .sidebar_element_seven label {
+.sidebarreport .sidebar_setting .sidebar_element_seven label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -371,7 +371,7 @@
   letter-spacing: 0.421px;
   margin-bottom: 8px;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length {
   margin-bottom: 10px;
   width: 100%;
   height: auto;
@@ -379,11 +379,11 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length .scale_from--a {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length .scale_from--a {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length .scale_from--a label {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length .scale_from--a label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -393,18 +393,18 @@
   letter-spacing: 0.421px;
   margin-bottom: 5px;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length .scale_from--a input {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length .scale_from--a input {
   width: 100px;
   height: 21.802px;
   flex-shrink: 0;
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length .scale_to--b {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length .scale_to--b {
   display: flex;
   flex-direction: column;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length .scale_to--b label {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length .scale_to--b label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -414,14 +414,14 @@
   letter-spacing: 0.421px;
   margin-bottom: 5px;
 }
-.sidebar .sidebar_setting .sidebar_element_seven .scale_length .scale_to--b input {
+.sidebarreport .sidebar_setting .sidebar_element_seven .scale_length .scale_to--b input {
   width: 150px;
   height: 16.802px;
   flex-shrink: 0;
   border-radius: 6.965px;
   background: #EBEBEB;
 }
-.sidebar .sidebar_setting .sidebar_element_eight {
+.sidebarreport .sidebar_setting .sidebar_element_eight {
   width: 80%;
   height: auto;
   display: flex;
@@ -430,7 +430,7 @@
   margin-bottom: 15px;
   padding-top: 10px;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .time {
+.sidebarreport .sidebar_setting .sidebar_element_eight .time {
   width: 95%;
   height: auto;
   display: flex;
@@ -438,7 +438,7 @@
   justify-content: space-between;
   margin-bottom: 13px;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .time label {
+.sidebarreport .sidebar_setting .sidebar_element_eight .time label {
   color: #000;
   font-family: Montserrat;
   font-size: 13.851px;
@@ -446,21 +446,21 @@
   font-weight: 400;
   line-height: normal;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .time .toggle {
+.sidebarreport .sidebar_setting .sidebar_element_eight .time .toggle {
   width: 17.967px;
   height: 15.839px;
   flex-shrink: 0;
   border: none;
   background-color: white;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .time .toggle ._3maKS {
+.sidebarreport .sidebar_setting .sidebar_element_eight .time .toggle ._3maKS {
   border: none;
   background: none;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .time .toggle ._3maKS:active, .sidebar .sidebar_setting .sidebar_element_eight .time .toggle ._3maKS:link {
+.sidebarreport .sidebar_setting .sidebar_element_eight .time .toggle ._3maKS:active, .sidebarreport .sidebar_setting .sidebar_element_eight .time .toggle ._3maKS:link {
   border: none;
 }
-.sidebar .sidebar_setting .sidebar_element_eight input {
+.sidebarreport .sidebar_setting .sidebar_element_eight input {
   width: 100%;
   height: 30.802px;
   flex-shrink: 0;
@@ -468,7 +468,7 @@
   background: #EBEBEB;
   padding: 6px;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .scale_instance {
+.sidebarreport .sidebar_setting .sidebar_element_eight .scale_instance {
   width: 95%;
   height: auto;
   display: flex;
@@ -477,7 +477,7 @@
   margin-top: 10px;
   margin-bottom: 17px;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .scale_instance label {
+.sidebarreport .sidebar_setting .sidebar_element_eight .scale_instance label {
   color: #000;
   font-family: Montserrat;
   font-size: 13.851px;
@@ -485,14 +485,14 @@
   font-weight: 400;
   line-height: normal;
 }
-.sidebar .sidebar_setting .sidebar_element_eight .scale_instance .toggle_b {
+.sidebarreport .sidebar_setting .sidebar_element_eight .scale_instance .toggle_b {
   width: 32.967px;
   height: 15.839px;
   flex-shrink: 0;
   border: none;
   background-color: white;
 }
-.sidebar .use_scale {
+.sidebarreport .use_scale {
   width: 80%;
   height: 38.763px;
   flex-shrink: 0;
@@ -509,14 +509,14 @@
   line-height: normal;
   cursor: pointer;
 }
-.sidebar .configure_element {
+.sidebarreport .configure_element {
   height: 50vh;
   width: 85%;
   display: flex;
   flex-direction: column;
   row-gap: 50px;
 }
-.sidebar .configure_element .configure_element--one {
+.sidebarreport .configure_element .configure_element--one {
   width: 90%;
   height: auto;
   display: flex;
@@ -525,14 +525,14 @@
   align-items: flex-start;
   row-gap: 20px;
 }
-.sidebar .configure_element .configure_element--one .configure--title {
+.sidebarreport .configure_element .configure_element--one .configure--title {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.sidebar .configure_element .configure_element--one .configure--title .label--rate {
+.sidebarreport .configure_element .configure_element--one .configure--title .label--rate {
   color: #000;
   font-family: Roboto;
   font-size: 17.029px;
@@ -542,7 +542,7 @@
   letter-spacing: 0.421px;
   margin-bottom: 10px;
 }
-.sidebar .configure_element .configure_element--one .configure--title .label--value {
+.sidebarreport .configure_element .configure_element--one .configure--title .label--value {
   color: #000;
   font-family: Poppins;
   font-size: 16px;
@@ -552,14 +552,14 @@
   letter-spacing: 0.36px;
   margin-left: 15px;
 }
-.sidebar .configure_element .configure_element--one .configure--question {
+.sidebarreport .configure_element .configure_element--one .configure--question {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.sidebar .configure_element .configure_element--one .configure--question .label--rate {
+.sidebarreport .configure_element .configure_element--one .configure--question .label--rate {
   color: #000;
   font-family: Roboto;
   font-size: 17.029px;
@@ -569,7 +569,7 @@
   letter-spacing: 0.421px;
   margin-bottom: 10px;
 }
-.sidebar .configure_element .configure_element--one .configure--question .label--value {
+.sidebarreport .configure_element .configure_element--one .configure--question .label--value {
   color: #000;
   font-family: Poppins;
   font-size: 16px;
@@ -579,7 +579,7 @@
   letter-spacing: 0.36px;
   margin-left: 15px;
 }
-.sidebar .configure_element .configure_element--two {
+.sidebarreport .configure_element .configure_element--two {
   width: 95%;
   display: flex;
   flex-direction: row;
@@ -590,14 +590,14 @@
   border-top: 2px solid #D4D4D4;
   padding-top: 30px;
 }
-.sidebar .configure_element .configure_element--two .configuration_font--color {
+.sidebarreport .configure_element .configure_element--two .configuration_font--color {
   width: 50%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.sidebar .configure_element .configure_element--two .configuration_font--color .font_label--color {
+.sidebarreport .configure_element .configure_element--two .configuration_font--color .font_label--color {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -607,7 +607,7 @@
   letter-spacing: 0.421px;
   margin-bottom: 7px;
 }
-.sidebar .configure_element .configure_element--two .configuration_font--color input {
+.sidebarreport .configure_element .configure_element--two .configuration_font--color input {
   width: 70%;
   height: 19px;
   flex-shrink: 0;
@@ -615,14 +615,14 @@
   background: #EBEBEB;
   color: black;
 }
-.sidebar .configure_element .configure_element--two .configuration_font--style {
+.sidebarreport .configure_element .configure_element--two .configuration_font--style {
   width: 50%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.sidebar .configure_element .configure_element--two .configuration_font--style .font_select_label {
+.sidebarreport .configure_element .configure_element--two .configuration_font--style .font_select_label {
   color: #000;
   font-family: Roboto;
   font-size: 14.029px;
@@ -632,7 +632,7 @@
   letter-spacing: 0.421px;
   margin-bottom: 7px;
 }
-.sidebar .configure_element .configure_element--two .configuration_font--style .configure_font--select {
+.sidebarreport .configure_element .configure_element--two .configuration_font--style .configure_font--select {
   width: 90%;
   height: 26px;
   flex-shrink: 0;
@@ -692,7 +692,7 @@
 /*!**********************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/components/templatestyle.scss ***!
   \**********************************************************************************************************************************************************************************************************************************************************/
-.scale_container {
+.scalereport_container {
   height: auto;
   width: 100%;
   display: flex;
@@ -704,7 +704,7 @@
        column-gap: 1px;
   row-gap: 1px;
 }
-.scale_container .frame {
+.scalereport_container .framereport {
   position: relative;
   width: 40%;
   margin: 10px auto;
@@ -718,14 +718,14 @@
   padding-right: 15px;
   margin-left: 20px;
 }
-.scale_container .frame .scale_use {
+.scalereport_container .framereport .scale_use {
   position: absolute;
   display: flex;
   width: 100%;
   justify-content: space-between;
   bottom: -40px;
 }
-.scale_container .frame .scale_use button {
+.scalereport_container .framereport .scale_use button {
   width: 75px;
   height: 31px;
   flex-shrink: 0;
@@ -735,15 +735,13 @@
   color: #3DCBA9;
   cursor: pointer;
   color: #3DCBA9;
-  leading-trim: both;
-  text-edge: cap;
   font-family: FF Nort;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-.scale_container .frame .frame__scale {
+.scalereport_container .framereport .framereport__scale {
   width: 100%;
   height: 100%;
   flex-shrink: 0;
@@ -757,7 +755,7 @@
   margin-top: 5px;
   margin-bottom: 30px;
 }
-.scale_container .frame .frame__scale .scale_title {
+.scalereport_container .framereport .framereport__scale .scale_title {
   color: #1C2B48;
   text-align: center;
   font-family: Inter;
@@ -767,7 +765,7 @@
   line-height: normal;
   margin-bottom: 6px;
 }
-.scale_container .frame .frame__scale .scale_typo {
+.scalereport_container .framereport .framereport__scale .scale_typo {
   width: 100%;
   color: #394869;
   font-family: Inter;
@@ -781,7 +779,7 @@
   justify-content: flex-start;
   letter-spacing: 0.532px;
 }
-.scale_container .frame .frame__scale .scale__buttons {
+.scalereport_container .framereport .framereport__scale .scale__buttons {
   display: flex;
   width: 90%;
   height: 90%;
@@ -792,7 +790,7 @@
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-.scale_container .frame .frame__scale .scale__buttons .emoji {
+.scalereport_container .framereport .framereport__scale .scale__buttons .emoji {
   width: 17.919px;
   height: 17.919px;
   flex-shrink: 0;
@@ -802,7 +800,7 @@
   color: #000000;
   background: none;
 }
-.scale_container .frame .frame__scale .scale__buttons .btn {
+.scalereport_container .framereport .framereport__scale .scale__buttons .btn {
   display: flex;
   width: 25.315px;
   height: 25.315px;
@@ -822,14 +820,14 @@
   line-height: normal;
   letter-spacing: 0.532px;
 }
-.scale_container .frame .frame__scale .scale_rate {
+.scalereport_container .framereport .framereport__scale .scale_rate {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   row-gap: 5px;
 }
-.scale_container .frame .frame__scale .scale_rate .rate__typo {
+.scalereport_container .framereport .framereport__scale .scale_rate .rate__typo {
   color: #394869;
   font-family: Inter;
   font-size: 12.161px;
@@ -838,7 +836,7 @@
   line-height: normal;
   color: #394869;
 }
-.scale_container .frame .frame__scale .display_hover {
+.scalereport_container .framereport .framereport__scale .display_hover {
   position: absolute;
   top: 10px;
   right: 50px;
@@ -846,16 +844,16 @@
   background-color: rgba(63, 181, 73, 0.5); /* Transparent black background */
   padding: 10px;
 }
-.scale_container .frame .frame__scale.hovered {
+.scalereport_container .framereport .framereport__scale.hovered {
   z-index: -99;
   opacity: 0.6; /* Set the opacity to 50% when Element 2 is displayed */
 }
-.scale_container .frame .frame__scale.hovered .diplay_hover {
+.scalereport_container .framereport .framereport__scale.hovered .diplay_hover {
   visibility: visible;
   opacity: 1;
   padding: 10px;
 }
-.scale_container .frame .frame__scale.hovered .diplay_hover button {
+.scalereport_container .framereport .framereport__scale.hovered .diplay_hover button {
   border: 1px solid green;
   width: 90px;
   height: 30px;

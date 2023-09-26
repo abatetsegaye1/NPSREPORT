@@ -51,17 +51,17 @@ function PieChartFrontEnd(_ref) {
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     style: {
-      width: 450,
+      width: 320,
       textAlign: "center"
     }
-  }, bar ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Pie, {
+  }, bar ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Bar, {
     data: data,
-    width: 30,
-    height: 30
-  }) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Bar, {
+    width: 10,
+    height: 10
+  }) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_chartjs_2__WEBPACK_IMPORTED_MODULE_3__.Pie, {
     data: data,
-    width: 30,
-    height: 30
+    width: 10,
+    height: 10
   }));
 }
 
@@ -15578,13 +15578,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const divsToUpdate = document.querySelectorAll(".boilerplate-update-me");
+const divsToUpdate = document.querySelectorAll(".scalereport-update");
 divsToUpdate.forEach(div => {
   const data = JSON.parse(div.querySelector("pre").innerText);
   console.log("data from pre class div", data);
   react_dom__WEBPACK_IMPORTED_MODULE_4___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_components_ScaleContext__WEBPACK_IMPORTED_MODULE_5__.ScaleProvider, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(OurComponent, data)), div);
-  div.classList.remove("boilerplate-update-me");
-  div.classList.add("boilerplate-update-front");
+  div.classList.remove("scalereport-update");
+  div.classList.add("scalereport-update-front");
 });
 function OurComponent(_ref) {
   let {

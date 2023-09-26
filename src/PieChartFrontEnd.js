@@ -30,8 +30,8 @@ export default function PieChartFrontEnd({state_back_end}) {
     ],
   };
   return (
-    <div style={{ width: 450, textAlign: "center" }}>    
-    {bar ? <Pie data={data} width={30} height={30} /> : <Bar data={data} width={30} height={30} /> }  
+    <div style={{ width: 320, textAlign: "center" }}>    
+    {bar ? <Bar data={data} width={10} height={10} /> : <Pie data={data} width={10} height={10} />  }  
     </div>
   );
 }

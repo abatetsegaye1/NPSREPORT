@@ -1,13 +1,14 @@
-import {useState,React} from 'react'
+import {useState,useContext,React} from 'react'
 import PieChart from './PieChart';
 import BarChart from './BarChart';
+import { ScaleContext } from './ScaleContext';
 
 
-export default function NumberScale({row,bar,btnbg,btncolr, customize,setCustomize,setScale, setting,setSetting}) {
+export default function NumberScale({bar,pie, customize,setCustomize,setScale, setting,setAttributes,setSetting}) {
  
 
   const [isHovered, setIsHovered] = useState(false);
- 
+  const { state, dispatch } = useContext(ScaleContext); 
   // Event handlers for hover
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -18,7 +19,7 @@ export default function NumberScale({row,bar,btnbg,btncolr, customize,setCustomi
   };
   const handleCustomize = () => {
      !customize && setCustomize(true);
-     setScale({row,bar,btnbg,btncolr});
+     setScale({bar});
   };
 
 
@@ -32,10 +33,10 @@ export default function NumberScale({row,bar,btnbg,btncolr, customize,setCustomi
   // };
   // const buttonStylecond=!emoji?buttonStyle:{transform:row ? '' : `rotate(270deg)`};
   return (
-    <div  className={`frame `}
-    style={{background:`${row ? '#E8D6F1':'#F2D5DD'}` }}>
-        <div className={`frame__scale ${isHovered ? 'hovered' : ''}`}  onMouseEnter={handleMouseEnter}
-    onMouseLeave={handleMouseLeave}  style={{transform:`${row ? '':'rotate(90deg)'}`}}>
+    <div  className={`framereport `}
+    style={{background:`${'#F2D5DD'}` }}>
+        <div className={`framereport__scale ${isHovered ? 'hovered' : ''}`}  onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}  >
           {/* <label className='scale_typo'>How would you rate it?</label> */}
           <div className='scale__buttons' style={{paddingLeft: bar?'130px':''}}>
             {/*
@@ -206,7 +207,8 @@ export default function NumberScale({row,bar,btnbg,btncolr, customize,setCustomi
   </defs>
 </svg>:10}</button> 
   */}
- {bar ? <PieChart />:<BarChart />} 
+ {bar &&<BarChart />} 
+ {pie &&<PieChart />} 
 {/* {!emoji && <button className='btn' style={buttonStylecond}>9</button> } */}
 {/* {!emoji && <button className='btn' style={buttonStylecond}>10</button> } */}
           {/* {!emoji && <button className='btn' style={buttonStylecond}>5</button> }  
@@ -219,14 +221,19 @@ export default function NumberScale({row,bar,btnbg,btncolr, customize,setCustomi
           </div>
       
         
-        {!customize && setting.useScale && isHovered && <div className="diplay_hover" style={{transform:row ? '' : `rotate(270deg)`}}>
+        {!customize && setting.useScale && isHovered && <div className="diplay_hover" >
             <button onClick={handleCustomize}>Customize</button>         
           </div>}
           </div>
         {!customize && setting.useScale && <div className='scale_use' onMouseEnter={handleMouseLeave}> 
           <label>Scale Template</label>
           <div>
-            <button onClick={()=>setSetting((setting)=>({...setting,emojiScale:emoji, numberScale:!emoji,useScale:false}))}>use</button>
+          <button onClick={()=>{
+              setSetting((setting)=>({...setting,bar:bar,pie:!bar,useScale:false}))
+              setAttributes({state:{...state,
+               bar:bar
+                }});
+          }}>use</button>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M10 4.0625C10.5178 4.0625 10.9375 3.64277 10.9375 3.125C10.9375 2.60723 10.5178 2.1875 10 2.1875C9.48223 2.1875 9.0625 2.60723 9.0625 3.125C9.0625 3.64277 9.48223 4.0625 10 4.0625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M10 10.9375C10.5178 10.9375 10.9375 10.5178 10.9375 10C10.9375 9.48223 10.5178 9.0625 10 9.0625C9.48223 9.0625 9.0625 9.48223 9.0625 10C9.0625 10.5178 9.48223 10.9375 10 10.9375Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

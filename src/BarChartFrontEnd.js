@@ -30,8 +30,8 @@ export default function BarChartFrontEnd({state_back_end}) {
     ],
   };
   return (
-    <div style={{ width: 450, textAlign: "center" }}>    
-      <Bar data={data} width={30} height={30} />
+    <div style={{ width: 350, textAlign: "center" }}>    
+      <Bar data={data} width={15} height={15} />
     </div>
   );
 }

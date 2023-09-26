@@ -1,5 +1,5 @@
 // style={{}}
-.scale_container{
+.scalereport_container{
     
   height:auto;
   width:100%;
@@ -11,7 +11,7 @@
   column-gap: 1px;
   row-gap: 1px;
 
-.frame {
+.framereport {
   position:relative;
   width: 40%;
   margin: 10px auto;
@@ -49,7 +49,7 @@
         line-height: normal;
     }
   }
-  .frame__scale{
+  .framereport__scale{
     width: 100%;
     height: 100%;
     flex-shrink: 0;
@@ -161,12 +161,12 @@
  }
   }
   
-  .frame__scale.hovered  {
+  .framereport__scale.hovered  {
     z-index: -99;
     opacity: 0.6; /* Set the opacity to 50% when Element 2 is displayed */
   }
   
-  .frame__scale.hovered  .diplay_hover {
+  .framereport__scale.hovered  .diplay_hover {
     visibility:visible;
     opacity: 1;
     padding: 10px;

@@ -1,8 +1,8 @@
 import App from "./App"
 import "./index.scss"
 
-wp.blocks.registerBlockType("makeupnamespace/make-up-block-name", {
-  title: "Brads Boilerplate Block",
+wp.blocks.registerBlockType("makeupnamespace/scale-report", {
+  title: "Boilerplatescalereport Block",
   icon: "welcome-learn-more",
   category: "common",
   attributes: {

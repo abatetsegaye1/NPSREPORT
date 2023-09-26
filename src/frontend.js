@@ -9,14 +9,14 @@ import { ScaleProvider } from "./components/ScaleContext"
 import PieChartFrontEnd from "./PieChartFrontEnd"
 
 
-const divsToUpdate = document.querySelectorAll(".boilerplate-update-me")
+const divsToUpdate = document.querySelectorAll(".scalereport-update")
 
 divsToUpdate.forEach(div => {
   const data = JSON.parse(div.querySelector("pre").innerText)
   console.log("data from pre class div",data);
   ReactDOM.render(<ScaleProvider><OurComponent {...data} /></ScaleProvider>, div)
-  div.classList.remove("boilerplate-update-me")
-  div.classList.add("boilerplate-update-front")
+  div.classList.remove("scalereport-update")
+  div.classList.add("scalereport-update-front")
 })
 
 function OurComponent({state}) {
